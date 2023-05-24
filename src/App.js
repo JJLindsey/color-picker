@@ -1,9 +1,9 @@
-import styles from 'styled-components'
+import styled from 'styled-components'
 import Picker from './Picker'
 import {GlobalStyle} from './GlobalStyle'
 import './App.css';
 
-const Wrapper = styles.div`
+const Wrapper = styled.div`
 height: 100vh;
 display: grid;
 align-items: center;
