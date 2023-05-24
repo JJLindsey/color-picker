@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import styles from 'styled-components'
+import Picker from './Picker'
+import {GlobalStyle} from './GlobalStyle'
 import './App.css';
+
+const Wrapper = styles.div`
+height: 100vh;
+display: grid;
+align-items: center;
+justify-items: center`
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalStyle />
+      <Wrapper>
+        <Picker/>
+      </Wrapper>
     </div>
   );
 }
