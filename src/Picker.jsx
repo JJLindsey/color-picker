@@ -1,5 +1,6 @@
-import React, { useState } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import styled from 'styled-components'
+import Modal from "./Modal"
 
 const PickerWrapper = styled.div`
     .swatch {
@@ -10,11 +11,17 @@ const PickerWrapper = styled.div`
 `
 export default function Picker() {
     const [color, setColor] = useState('#000')
+    const [show, setShow] = useState(false)
+
+    const modal = useRef(null)
 
     return (
         <>
           <PickerWrapper color={color}>
-            <div className='swatch' />
+            <div className='swatch' onClick={() => setShow(true)}/>
+            <Modal modal={modal} show={show} onClose={() => setShow(false)}>
+                <div> 😎 </div>
+            </Modal>
           </PickerWrapper>
         </>
     )

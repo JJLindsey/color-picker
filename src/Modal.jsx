@@ -9,7 +9,7 @@ const zoom = keyframes`
     transform: scale(1) translate(-50%, -50%);
   }
 `
-const Backdrop = styled.div`
+export const Backdrop = styled.div`
   position: fixed;
   z-index: 1;
   top: 0;
@@ -19,7 +19,7 @@ const Backdrop = styled.div`
   display: ${(p) => (p.show ? 'block' : 'none')};
   background: rgba(0, 0, 0, 0.3);
 `
-const ModalWrapper = styled.dev`
+export const ModalWrapper = styled.div`
     position: fixed;
     top: 50%;
     left: 50%;
@@ -31,7 +31,7 @@ const ModalWrapper = styled.dev`
     display: ${(p) => (p.show ? 'block' : 'none')};
     animation: ${zoom} 0.2s;
 `
-export default function Modal(modal, show, onClose, children) {
+export default function Modal({modal, show, onClose, children}) {
     return (
         <>
           <Backdrop show={show}  onClick={onClose}/>

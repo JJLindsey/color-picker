@@ -1,16 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styles from 'styled-components'
-import Picker from './Picker'
-import {GlobalStyle} from './GlobalStyle'
-import './index.css';
+//import styled from 'styled-components'
+// import './index.css';
 import App from './App';
-
-const Wrapper = styles.div`
-height: 100vh;
-display: grid;
-align-items: center;
-justify-items: center`
 
 ReactDOM.render(
   <React.StrictMode>
